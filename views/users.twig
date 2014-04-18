@@ -1,0 +1,21 @@
+{% extends 'layout.twig' %}
+
+{% block head %}
+{{ parent() }}
+ <style type="text/css">
+	h1 {color: grey;} 
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>Users</h1>
+<ul>
+    {% for row in data %}
+        <li>{{ row.name|e}}, {{ row.email|e }},
+		<a href="delete.twig">Delete</a>
+		<a href="/~11_krawczyk/php/chat/web/admin/users/">Show</a>
+	</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

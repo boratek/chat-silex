@@ -1,0 +1,22 @@
+{% extends 'layout.twig' %}
+
+{% block head %}
+{{ parent() }}
+ <style type="text/css">
+        h1 {color: grey;}
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<h1>Item</h1>
+<p>
+    {% if item|length > 0 %}
+        {{ item.name|upper }}, {{ item.email|e }}
+    {% else %}
+        Invalid data.
+    {% endif %}
+</p>
+
+{% endblock %}
