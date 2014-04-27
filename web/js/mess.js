@@ -1,0 +1,134 @@
+
+//Start the showmessages() function
+showmessages();
+//This function will submit the message
+function send(){
+	var email = document.getElementById("email");
+	var adres = email.getElementsByTagName("h4");
+	var user = adres[0].innerHTML;
+//alert(user);
+   //Send an XMLHttpRequest to the 'send.php' file with all the required informations
+   var sendto = 'index.php?text=' + document.getElementById('text').value + '&email=' + user;
+   if(window.XMLHttpRequest){
+      xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET",sendto,false);
+      xmlhttp.send(null);
+   }
+   else{
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      xmlhttp.open("GET",sendto,false);
+      xmlhttp.send();
+   }
+   
+   var error = '';
+   //If an error occurs the 'send.php' file send`s the number of the error and based on that number a message is displayed
+   switch(parseInt(xmlhttp.responseText)){
+   case 1:
+      error = 'The database is down!';
+      break;
+   case 2:
+      error = 'The database is down!';
+      break;
+   case 3:
+      error = 'Don`t forget the message!';
+      break;
+   case 4:
+      error = 'The message is too long!';
+      break;
+   case 5:
+      error = 'Don`t forget the name!';
+      break;
+   case 6:
+      error = 'The name is too long!';
+      break;
+   case 7:
+      error = 'This name is already used by somebody else!';
+      break;
+   case 8:
+      error = 'The database is down!';
+   }
+   if(error == ''){
+      document.getElementById('error').innerHTML = '';
+      showmessages();
+   }
+   else{
+      document.getElementById('error').innerHTML = error;
+   }
+}
+
+//This function will display the messages
+function showmessages(){
+   //Send an XMLHttpRequest to the 'show-message.php' file
+   if(window.XMLHttpRequest){
+      xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET","index.php",false);
+      xmlhttp.send(null);
+   }
+   else{
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      xmlhttp.open("GET","index.php",false);
+      xmlhttp.send();
+   }
+   //Replace the content of the messages with the response from the 'show-messages.php' file
+   document.getElementById('chatDiv').innerHTML = xmlhttp.responseText;
+   //Repeat the function each 30 seconds
+   setTimeout('showmessages()',10000);
+}
+
+/*
+
+<!--
+//Browser Support Code
+function ajaxFunction(){
+ var ajaxRequest;  // The variable that makes Ajax possible!
+	
+ try{
+   // Opera 8.0+, Firefox, Safari
+   ajaxRequest = new XMLHttpRequest();
+ }catch (e){
+   // Internet Explorer Browsers
+   try{
+      ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+   }catch (e) {
+      try{
+         ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+      }catch (e){
+         // Something went wrong
+         alert("Your browser broke!");
+         return false;
+      }
+   }
+ }
+ 
+ 
+ 
+ // Create a function that will receive data 
+ // sent from the server and will update
+ // div section in the same page.
+ ajaxRequest.onreadystatechange = function(){
+   if(ajaxRequest.readyState == 4 && ajaxRequest.status == 200){
+      var ajaxDisplay = document.getElementById('ajaxDiv');
+      ajaxDisplay.innerHTML = ajaxRequest.responseText;
+   }
+ }
+ // Now get the value from user and pass it to
+ // server script.
+ 
+ var email = document.getElementById('email').value;
+ var text = document.getElementById('text').value;
+
+ var queryString = "?email=" + email ;
+ queryString +=  "&text=" + text;
+ ajaxRequest.open("GET", "db.php" + 
+                              queryString, true);
+   //ajaxRequest.open("POST", "db.php", true);
+   //ajaxRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+   //var ajaxDisplay = document.getElementById('ajaxDiv');
+      //ajaxDisplay.innerHTML = ajaxRequest.responseText;
+ ajaxRequest.send(null); 
+ setTimeout(30000);
+
+}
+//-->
+
+*/

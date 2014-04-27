@@ -1,0 +1,35 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Chat - User- Profile{% endblock %}
+
+{% block head %}
+{{ parent() }}
+ <style type="text/css">
+        h1 {color: grey;}
+</style>
+{% endblock %}
+
+{% block content %}
+
+  {% if user|length > 0 %}
+    	{% for row in user %}
+    	<h1>{{row.display_name}}</h1>
+        <a href="{{row.display_name}}/chat">Chat</a>
+    	{% endfor %}
+    {% else %}
+        Invalid data.
+    {% endif %}
+
+
+<h2>Your datas</h2>
+<p>
+	{% if user|length > 0 %}
+    	{% for row in user %}
+        {{row.user_id}}, {{ row.username|upper }}, {{ row.email|e }}, {{row.display_name}}
+    	{% endfor %}
+    {% else %}
+        Invalid data.
+    {% endif %}
+</p>
+
+{% endblock %}

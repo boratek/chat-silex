@@ -1,0 +1,31 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Chat - User- Profile{% endblock %}
+
+{% block head %}
+{{ parent() }}
+ <style type="text/css">
+        h1 {color: grey;}
+        #chatDiv{width: 700px; height: 400px; border: 2px solid grey; backgrund: none; overflow: auto; text-wrap:normal;}
+</style>
+<script src="../../../js/utils.js"></script>
+<script src="../../../js/ajax.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<h1>Chat something</h2>
+<div id="chatDiv">
+
+
+{% block chat %}
+{% endblock %}
+</div>
+
+<form action="" method="post">
+    {{ form_widget(form) }}
+    <input type="submit" name="submit" />
+</form>
+
+
+{% endblock %}

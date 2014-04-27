@@ -1,0 +1,12 @@
+{% block chat %}
+{% for row in display_messages %}
+    {{ row.posted_on|nl2br }} 
+    {{ row.user_name|nl2br }} 
+    {{ row.message|nl2br }}
+    {{"<br/>"}}
+{% endfor %}
+{% endblock %}
+
+
+{% block content %}
+{% endblock %}

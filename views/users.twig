@@ -1,5 +1,7 @@
 {% extends 'layout.twig' %}
 
+{% block title %}Chat - Admin - Users{% endblock %}
+
 {% block head %}
 {{ parent() }}
  <style type="text/css">
@@ -10,10 +12,10 @@
 {% block content %}
 <h1>Users</h1>
 <ul>
-    {% for row in data %}
-        <li>{{ row.name|e}}, {{ row.email|e }},
-		<a href="delete.twig">Delete</a>
-		<a href="/~11_krawczyk/php/chat/web/admin/users/">Show</a>
+    {% for row in user %}
+        <li>{{row.user_id}}, {{ row.username|e}}, {{ row.email|e }},
+		<a href="users/delete/{{row.user_id}}">Delete</a>
+		<a href="users/{{row.user_id}}">Show</a>
 	</li>
     {% endfor %}
 </ul>

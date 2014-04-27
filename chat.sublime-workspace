@@ -1,0 +1,746 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"displ",
+				"display_messages"
+			],
+			[
+				"dis",
+				"display_messages"
+			],
+			[
+				"getM",
+				"getMessage"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"passw",
+				"password2"
+			],
+			[
+				"new",
+				"new_message"
+			],
+			[
+				"disl",
+				"display"
+			],
+			[
+				"sql",
+				"sql_insert_user"
+			],
+			[
+				"display",
+				"display_name"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"user_",
+				"user_id"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"test",
+				"test_template"
+			],
+			[
+				"err",
+				"error_msg"
+			],
+			[
+				"home",
+				"home_url"
+			],
+			[
+				"mysqli_fet",
+				"mysqli_fetch_array"
+			],
+			[
+				"mysqli_fe",
+				"mysqli_enable_reads_from_master"
+			],
+			[
+				"passwo",
+				"password1"
+			],
+			[
+				"PHP_AUTH",
+				"PHP_AUTH_USER"
+			],
+			[
+				"root",
+				"gupnp_root_device_new"
+			],
+			[
+				"css",
+				"css"
+			],
+			[
+				"email_list",
+				"email_listcol"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"content",
+				"content"
+			],
+			[
+				"email",
+				"email_list"
+			],
+			[
+				"displa",
+				"display_all"
+			],
+			[
+				"els",
+				"else"
+			],
+			[
+				"con",
+				"connect"
+			],
+			[
+				"_c",
+				"_c"
+			],
+			[
+				"ex",
+				"ex"
+			],
+			[
+				"DB_NAME",
+				"mysql_db_name"
+			],
+			[
+				"backgroun",
+				"background"
+			],
+			[
+				"messageb",
+				"messagebox"
+			],
+			[
+				"getEl",
+				"getElementById"
+			],
+			[
+				"name",
+				"nameArray"
+			],
+			[
+				"color",
+				"colorArray"
+			],
+			[
+				"id",
+				"idArray"
+			],
+			[
+				"mess",
+				"messageArray"
+			],
+			[
+				"time",
+				"timeArray"
+			],
+			[
+				"getE",
+				"getElementsByTagName"
+			],
+			[
+				"wiad",
+				"wiadomości"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"chat",
+				"chatURL"
+			],
+			[
+				"xmlHT",
+				"xmlHttpGetMessages"
+			],
+			[
+				"xmlHtt",
+				"xmlHttpGetMessages"
+			],
+			[
+				"curr",
+				"currentColor"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"XMLHttp",
+				"XMLHttpRequest"
+			],
+			[
+				"mous",
+				"mouseY"
+			],
+			[
+				"mouse",
+				"mouseX"
+			],
+			[
+				"img",
+				"imgfile"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"real",
+				"real_escape_string"
+			],
+			[
+				"error",
+				"error_message"
+			],
+			[
+				"errS",
+				"errStr"
+			],
+			[
+				"data",
+				"database_path"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"zf",
+				"ZfcUser"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "views/chat.twig",
+			"settings":
+			{
+				"buffer_size": 633,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/js/ajax.js",
+			"settings":
+			{
+				"buffer_size": 793,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/index.php",
+			"settings":
+			{
+				"buffer_size": 9137,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/db.php",
+			"settings":
+			{
+				"buffer_size": 315,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/display.twig",
+			"settings":
+			{
+				"buffer_size": 248,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 440.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/chat/web/db.php",
+		"/var/www/chat/web/js/mess.js",
+		"/var/www/chat/views/base.html",
+		"/var/www/chat.zip",
+		"/var/www/chat/views/signin.twig",
+		"/var/www/chat/views/login.twig",
+		"/var/www/chat/views/index.twig",
+		"/var/www/chat/views/show.twig",
+		"/var/www/ch07/initial/mismatch/login.php",
+		"/var/www/ch07/initial/mismatch/authenticate.php",
+		"/var/www/chat/views/users.twig",
+		"/var/www/chat/views/display.twig",
+		"/var/www/chat/views/layout.twig",
+		"/var/www/chat/views/delete.twig",
+		"/var/www/chat/composer.json",
+		"/var/www/chat/views/chat.twig",
+		"/var/www/chat/views/profile.twig",
+		"/var/www/chat/views/hello.twig",
+		"/var/www/chat/web/.htaccess",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/template/wishlist/sidebar.phtml",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/layout/page.xml",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/template/2columns-right.phtml",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/template/3columns.phtml",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/template/page/test_template.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/page/template/links.phtml",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/layout/catalog.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/page/2columns-right.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/catalog/product/list.phtml",
+		"/home/bartek/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/bartek/.config/sublime-text-3/Packages/User/PHP.sublime-settings",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/layout/paypal.xml",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/layout/wishlist.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/layout/page.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/layout/catalog.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/page/3columns.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/customer/logout.phtml",
+		"/var/www/magento/magento/skin/frontend/default/default/css/styles.css",
+		"/var/www/magento/magento/app/locale/en_US/Mage_Page.csv",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/newsletter/subscribe.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/customer/address.phtml",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/layout/local.xml",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/layout/poll.xml",
+		"/var/www/magento/magento/app/design/frontend/default/newtheme/layout/newsletter.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/checkout/cart/coupon.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/checkout/cart.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/layout/newsletter.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/layout/wishlist.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/layout/reports.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/layout/checkout.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/checkout/onepage.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/layout/poll.xml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/page/html/header.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/catalog/category/view.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/catalog/product/view.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/catalog/product/view/addto.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/catalog/product/view/media.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/catalog/product/view/options/type/select.phtml",
+		"/var/www/magento/magento/app/design/frontend/base/default/template/page/html/topmenu.phtml",
+		"/var/www/magento/magento/app/design/frontend/default/modern/layout/page.xml",
+		"/var/www/magento/magento/errors/report.php",
+		"/home/bartek/Pulpit/parallax-scrolling-demo/css/main.css",
+		"/home/bartek/.cache/.fr-3V64oG/parallax-scrolling-demo/css/main.css",
+		"/home/bartek/.cache/.fr-JRfMAA/parallax-scrolling-demo/js/parallax.js",
+		"/home/bartek/Pulpit/parallax-scrolling-demo/js/parallax.js",
+		"/var/www/hfphmys/index.tpl.php",
+		"/var/www/hfphmys/conf.php",
+		"/var/www/hfphmys/remove.php",
+		"/var/www/hfphmys/addemail.html",
+		"/var/www/hfphmys/header.html",
+		"/var/www/hfphmys/addemail_obj.php",
+		"/home/bartek/Pulpit/parallax-scrolling-demo/index.html",
+		"/var/www/hfphmys/addemail.php",
+		"/var/www/calc.php",
+		"/var/www/view_class/lib/View.php",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Resources/views/layout.html.twig",
+		"/var/www/Silex/web/index.html",
+		"/var/www/Silex/web/chat.js",
+		"/var/www/Silex/web/get_color.php",
+		"/var/www/Silex/web/chat.class.php",
+		"/var/www/Silex/web/chat.php",
+		"/var/www/Silex/web/error_handler.php",
+		"/var/www/Silex/web/config.php",
+		"/var/www/Silex/web/index.php",
+		"/home/bartek/Pulpit/ajax+php/r05/chat/chat.js",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Entity/Enquiry.php",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Controller/PageController.php",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Entity/Comment.php",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Entity/Repository/BlogRepository.php",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Entity/Blog.php",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Resources/views/Page/index.html.twig",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Resources/config/routing.yml",
+		"/var/www/symfBlog/myproject/composer.json",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Controller/BlogController.php",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Resources/views/Blog/show.html.twig",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/DataFixtures/ORM/BlogFixtures.php",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Entity/Blog/Enquiry.php",
+		"/var/www/symfBlog/myproject/app/config/config.yml",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Entity/Blog/Blog.php",
+		"/var/www/symfBlog/myproject/app/config/config_dev.yml",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Resources/views/Page/contactEmail.txt.twig",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Form/Blog/EnquiryType.php",
+		"/var/www/symfBlog/myproject/app/config/parameters.yml",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Resources/public/css/blog.css",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Resources/config/config.yml",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Resources/views/Page/contact.html.twig",
+		"/var/www/symfBlog/myproject/app/Resources/views/base.html.twig",
+		"/home/bartek/Pulpit/underscore.html",
+		"/var/www/symfBlog/myproject/web/css/screen.css",
+		"/var/www/symfBlog/myproject/app/config/routing.yml",
+		"/var/www/symfBlog/myproject/src/Blogger/BlogBundle/Resources/views/Page/about.html.twig",
+		"/var/www/symfProject/app/config/routing.yml",
+		"/var/www/symfProject/app/config/routing_dev.yml",
+		"/var/www/symfProject/src/Blogger/BlogBundle/Resources/config/routing.yml",
+		"/var/www/symfProject/app/cache/dev/assetic/routing.yml",
+		"/var/www/symfProject/app/AppKernel.php",
+		"/var/www/symfProject/src/Blogger/BlogBundle/Resources/views/layout/layout.html.twig",
+		"/var/www/symfProject/web/app.php",
+		"/var/www/symfProject/src/Blogger/BlogBundle/Resources/views/Page/about.html.twig",
+		"/var/www/symfProject/src/Blogger/BlogBundle/Resources/views/Page/index.html.twig",
+		"/var/www/symfProject/src/Blogger/BlogBundle/Controller/PageController.php",
+		"/var/www/zf/chat/config/application.config.php",
+		"/var/www/zf/chat/vendor/zf-commons/zfc-user/src/ZfcUser/Entity/User.php",
+		"/var/www/zf/chat/vendor/zf-commons/zfc-user/src/ZfcUser/Entity/UserTable.php",
+		"/var/www/zf/chat/vendor/zf-commons/zfc-user/src/ZfcUser/Entity/UserInterface.php",
+		"/var/www/zf/chat/config/autoload/global.php",
+		"/var/www/zf/chat/config/autoload/local.php.dist",
+		"/var/www/zf/chat/vendor/zendframework/zendframework/library/Zend/EventManager/GlobalEventManager.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/var/www/magento/magento/app/design/frontend/base/default",
+			"/var/www/magento/magento/app/design/frontend/base/default/layout",
+			"frontend/base/default/template/callouts/left_col.phtml",
+			"/var/www/magento/magento/app/design/frontend/base/default/layout"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"db.php",
+			"list.phtml",
+			"list",
+			"list.phtml\n",
+			"list\n",
+			"test_block\n",
+			");\n",
+			"$_COOKIE",
+			"make sure the user",
+			"$username = mysqli_real_escape_string($dbc, trim($_POST['username']));\n			",
+			"logo.phtml",
+			"class",
+			"price",
+			"view.phtml",
+			"view",
+			"product",
+			"product-essential",
+			"test_block_product",
+			"wishlist",
+			"product view",
+			"productview",
+			"test_bl",
+			"subscribe",
+			"active",
+			"left_col",
+			"left_col.phtml",
+			"left_col",
+			"right_col",
+			"about",
+			"english-channel",
+			"frameless-parachute",
+			"manned-flight"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"php",
+			"ror",
+			"jquery",
+			"css"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "views/chat.twig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								465,
+								465
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "web/js/ajax.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								441,
+								441
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "web/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7066,
+								7066
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2755.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "web/db.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								33
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/display.twig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								245,
+								245
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "chat.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"userT",
+				"getUserTable"
+			]
+		],
+		"width": 692.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 289.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
