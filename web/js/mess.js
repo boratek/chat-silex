@@ -61,18 +61,21 @@ function showmessages(){
    //Send an XMLHttpRequest to the 'show-message.php' file
    if(window.XMLHttpRequest){
       xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("GET","index.php",false);
+      xmlhttp.open("GET","http://localhost/chat-controllers/web/user/profile/{display_name}/display",false);
       xmlhttp.send(null);
+      //../../../src/Controller/UserController.php
    }
    else{
       xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-      xmlhttp.open("GET","index.php",false);
+      xmlhttp.open("GET","http://localhost/chat-controllers/web/user/profile/{display_name}/display",false);
       xmlhttp.send();
    }
+   //console.log(xmlhttp.responseText);
+   console.log(document.getElementById('chatDiv').innerHTML);
    //Replace the content of the messages with the response from the 'show-messages.php' file
    document.getElementById('chatDiv').innerHTML = xmlhttp.responseText;
    //Repeat the function each 30 seconds
-   setTimeout('showmessages()',10000);
+   setTimeout('showmessages()',3000);
 }
 
 /*

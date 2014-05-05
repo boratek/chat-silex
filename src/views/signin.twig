@@ -1,0 +1,19 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Chat - User - Sign in{% endblock %}
+
+{% block head %}
+{{ parent() }}
+ <style type="text/css">
+        h1 {color: grey;}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<form action="#" method="post">
+    {{ form_widget(form) }}
+    <input type="submit" name="submit" />
+</form>
+
+{% endblock %}

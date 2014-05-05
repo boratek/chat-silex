@@ -1,0 +1,23 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Chat - Admin - Users{% endblock %}
+
+{% block head %}
+{{ parent() }}
+ <style type="text/css">
+	h1 {color: grey;} 
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>Users</h1>
+<ul>
+    {% for row in user %}
+        <li>{{row.user_id}}, {{ row.username|e}}, {{ row.email|e }},
+		<a href="users/delete/{{row.user_id}}">Delete</a>
+		<a href="users/{{row.user_id}}">Show</a>
+	</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

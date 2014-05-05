@@ -14,7 +14,7 @@ else
 // Sends request to PHP file
 // You can pass query string name/value pairs here if you want
 // Example: data.php?name1=value1&name2=value2, etc
-ajax.open('get', '../../../db.php', true);
+ajax.open('get', 'http://localhost/chat-controllers/web/user/profile/{display_name}/chat', true);
 ajax.send(null);
 
 // Runs function when state of our request variable changes

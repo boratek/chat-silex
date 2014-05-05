@@ -1,0 +1,21 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Chat - Silex{% endblock %}
+
+{% block head %}
+{{ parent() }}
+ <style type="text/css">
+        h1 {color: grey;}
+        #chatDiv{width: 700px; height: 400px; border: 2px solid grey; backgrund: none; overflow: auto; text-wrap:normal;}
+</style>
+<script src="../../../js/utils.js"></script>
+<script src="../../../js/mess.js"></script>
+{% endblock %}
+
+{% block content %}
+<h1>Strona główna</h1>
+<a href="../admin">Admin</a>
+<a href="../login">Log in</a>
+<a href="../signin">Sign in</a>
+<a href="../user/profile">User Profile</a>
+{% endblock %}

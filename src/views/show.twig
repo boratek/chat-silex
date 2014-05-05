@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Chat - Admin - Show{% endblock %}
+
+{% block head %}
+{{ parent() }}
+ <style type="text/css">
+        h1 {color: grey;}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<h1>User</h1>
+<p>
+    {% if user|length > 0 %}
+    	{% for row in user %}
+        {{row.user}}, {{ row.username|upper }}, {{ row.email|e }}
+    	{% endfor %}
+    {% else %}
+        Invalid data.
+    {% endif %}
+</p>
+
+{% endblock %}
