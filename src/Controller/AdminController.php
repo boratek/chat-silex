@@ -2,92 +2,108 @@
 
 namespace Controller;
 
-//include 'config.php';
-
 use Silex\Application;
 use Silex\ControllerProviderInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Validator\Constraints as Assert;
+use Model\AdminModel;
 
 class AdminController implements ControllerProviderInterface
 {
     public function connect(Application $app)
     {
         $adminController = $app['controllers_factory'];
-        $adminController->get('/', array($this, 'index'));
-        $adminController->get('/add', array($this, 'add'));
-        $adminController->get('/edit', array($this, 'edit'));
-        $adminController->get('/delete', array($this, 'delete'));
-        $adminController->get('/view', array($this, 'view'));
+        $adminController->get('/{page}', array($this, 'index'))->value('page', 1)->bind('/admin/');
+        $adminController->match('/login', array($this, 'login'))->bind('/admin/login');
+        $adminController->match('/logout', array($this, 'logout'))->bind('/admin/logout');
+        $adminController->match('/delete/{user_id}', array($this, 'delete'))->bind('/admin/delete');;
+        $adminController->match('/view/{user_id}', array($this, 'view'))->bind('/admin/view');
         return $adminController;
     }
 
-    public function index(Application $app)
+    public function index(Application $app, Request $request)
     {
 
-        // //db
+        $pageLimit = 3;
+        $page = (int) $request->get('page', 1);
+        $adminModel = new AdminModel($app);
+        $pagesCount = $adminModel->countUsersPages($pageLimit);
 
-        // //ADMIN
+        if (($page < 1) || ($page > $pagesCount)) {
+            $page = 1;
+        }
 
-        // //list of users
-        // $app->get('admin/users', function () use ($app) {
-            
-        //     $user = $app['db']->fetchAll('SELECT * FROM user');
-        //     var_dump($user);
-        //     return $app['twig']->render('users.twig', array('user' => $user ));
-
-
-        // });
-
-	       return 'Index Action';
+        $users = $adminModel->getUsersPage($page, $pageLimit, $pagesCount);
+        $paginator = array('page' => $page, 'pagesCount' => $pagesCount);
+        
+        return $app['twig']->render('admin/admin_index.twig', array('users' => $users, 'paginator' => $paginator ));
     }
 
-    public function login(Application $app){
-
-        // $app->get('/adminlogin', function(Request $request) use ($app) {
-        //     return $app['twig']->render('admin_login.twig', array(
-        //         'error'         => $app['security.last_error']($request),
-        //         'last_username' => $app['session']->get('_security.last_username'),
-        //     ));
-        // });
-
-        // $app->get('/admin_login_check', function() use ($app) {
-        //     return $app['twig']->render('admin_login_check.twig');
-        // });
-    }
-
-    public function edit(Application $app)
-    {
-        return 'Edit Action';
-    }
-
-    public function delete(Application $app)
-    {
-        return 'Delete Action';
-    }
-
-    public function view(Application $app)
+    public function login(Application $app, Request $request)
     {
 
-        // //user specified by id
-        // $app->get('/admin/users/{id}', function (Silex\Application $app, $id) {
+        $data = array();
 
-        //     $sql = "SELECT user_id, username, email FROM user WHERE user_id = $id";
+        $form = $app['form.factory']->createBuilder('form', $data)
+            ->add('name', 'text', array(
+                'constraints' => array(new Assert\NotBlank(), new Assert\Length(array('min' => 5)))
+            ))
+            ->add('password', 'password', array(
+                'constraints' => array(new Assert\NotBlank(), new Assert\Length(array('min' => 5)))
+            ))
+            ->getForm();
 
-        //     $user = $app['db']->fetchAll("SELECT user_id, username, email FROM user WHERE user_id = $id");
+        $form->handleRequest($request);
 
-        //     return $app['twig']->render('show.twig', array('user' => $user));
-        // });
+        if ($form->isValid()) {
+            $adminModel = new AdminModel($app);
+            $admin = $adminModel->loginAdmin($form->getData());
 
-        // //delete user specified by id -- działa, ale zwraca błąd!!
-        // $app->get('/admin/users/delete/{id}', function (Silex\Application $app, $id) {
+            if (count($admin)) {
+                $app['session']->set('admin', $admin);
+                $app['session']->getFlashBag()->add('success', array('title' => 'Ok', 'content' => 'Hey Admin, login is successfull.'));
+                return $app->redirect($app['url_generator']->generate('/admin'), 301);
+            }
+            else{
+                $app['session']->getFlashBag()->add('error', array('title' => 'FALSE', 'content' => 'Login is not successfull. Please try again.'));
+            }
+        }
 
-        //     $sql = "SELECT user_id, username, email FROM user WHERE user_id = $id";
+        return $app['twig']->render('admin/admin_login.twig', array('form' => $form->createView()));
+    }
 
-        //     $user = $app['db']->fetchAll("DELETE FROM user WHERE user_id = $id LIMIT 1");
+    public function logout(Application $app, Request $request)
+    {
+        if (($admin = $app['session']->get('admin')) !== null) {
+            $app['session']->remove('user');
+        }
+        $app['session']->getFlashBag()->add('success', array('title' => 'Ok', 'content' => 'Hey Admin, You have been logout successfully.'));
+        return $app['twig']->render('admin/admin_logout.twig');
+    }
 
-        //     return $app['twig']->render('delete.twig', array('user' => $user));
-        // });
-        return 'View Action';
+    public function delete(Application $app, Request $request)
+    {
+        $user_id = (int) $request->get('user_id', 0);
+
+        $adminModel = new AdminModel($app);
+
+        $user = $adminModel->deleteUser($user_id);
+
+        $app['session']->getFlashBag()->add('success', array('title' => 'OK', 'content' => 'User has been succesfully deleted.'));
+        
+        return $app->redirect($app['url_generator']->generate('/admin/'), 301);
+    }
+
+    public function view(Application $app, Request $request)
+    {
+        $user_id = (int) $request->get('user_id', 0);
+
+        $adminModel = new AdminModel($app);
+
+        $user = $adminModel->viewUser($user_id);
+        
+        return $app['twig']->render('admin/admin_view.twig', array('user' => $user));
     }
 
 }

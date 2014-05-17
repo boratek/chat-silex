@@ -1,0 +1,19 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Chat - Admin - Logout{% endblock %}
+
+{% block head %}
+{{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+
+{% for flashbag in app.session.getFlashBag.get('info') %}
+<div class="alert alert-info">
+    {{ flashbag.title }}
+	{{ flashbag.content }}
+</div>
+{% endfor %}
+
+{% endblock %}

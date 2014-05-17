@@ -1,0 +1,79 @@
+{% extends 'layout.twig' %}
+
+{% block head %}
+{{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+{% for flashbag in app.session.getFlashBag.get('success') %}
+<div class="alert alert-success">
+    {{ flashbag.title }}
+	{{ flashbag.content }}
+</div>
+{% endfor %}
+
+<h1>List of users</h1>
+
+{%  if users|length > 0 %}
+
+        <div>
+            {% if paginator.page > 1 %}
+                {% set previous = (paginator.page - 1) %}
+                <a href="{{ url('/admin/', {'page': previous}) }}" title="previous page">previous page</a>
+            {%  endif %}
+
+            {% if paginator.page < paginator.pagesCount %}
+               {% set next = (paginator.page + 1) %}
+               <a href="{{ url('/admin/', {'page': next}) }}" title="next page">next page</a>
+            {% endif  %}
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Displayed name</th>
+                    <th colspan="2">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.user_id|e }}</td>
+                    <td>{{ user.username|nl2br }}</td>
+                    <td>{{ user.email|nl2br }}</td>
+                    <td>{{ user.display_name|nl2br }}</td>
+                    <td>
+                        <a href="{{ url('/admin/view', {'user_id': user.user_id}) }}" title="View user">View</a>
+                    </td>
+                    <td>
+                        <a href="{{ url('/admin/delete', {'user_id': user.user_id}) }}" title="Delete user">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>
+            Users not found.
+        </p>
+    {% endif %}
+<!--
+<ul>
+	{% for user in users %}
+		<li> 
+			{{ user.user_id|e }}
+			{{ user.username|nl2br }}
+			{{ user.email|nl2br }} 
+			{{ user.display_name|nl2br }}
+			<a href="delete/{{user.user_id}}">Delete</a>
+			<a href="view/{{user.user_id}}">Show</a>
+		</li>
+	{% endfor %}
+</ul>
+-->
+
+{% endblock %}

@@ -4,16 +4,22 @@
 
 {% block head %}
 {{ parent() }}
- <style type="text/css">
-        h1 {color: grey;}
-</style>
 {% endblock %}
 
 {% block content %}
 
-<form action="#" method="post">
+
+{% for flashbag in app.session.getFlashBag.get('error') %}
+<div class="alert alert-error">
+    {{ flashbag.title }}
+	{{ flashbag.content }}
+</div>
+{% endfor %}
+
+
+<form action="{{ url('/login') }}" method="post" novalidate {{ form_enctype(form) }} class="form-inline well span3">
     {{ form_widget(form) }}
-    <input type="submit" name="submit" />
+    <button type="submit" class="btn btn-primary">{{ 'Login'|trans }}</button>
 </form>
 
 {% endblock %}

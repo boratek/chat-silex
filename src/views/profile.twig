@@ -4,12 +4,18 @@
 
 {% block head %}
 {{ parent() }}
- <style type="text/css">
-        h1 {color: grey;}
-</style>
 {% endblock %}
 
 {% block content %}
+
+
+{% for flashbag in app.session.getFlashBag.get('success') %}
+<div class="alert alert-success">
+    {{ flashbag.title }}
+    {{ flashbag.content }}
+</div>
+{% endfor %}
+
 
   {% if user|length > 0 %}
     	{% for row in user %}
@@ -25,7 +31,10 @@
 <p>
 	{% if user|length > 0 %}
     	{% for row in user %}
-        {{row.user_id}}, {{ row.username|upper }}, {{ row.email|e }}, {{row.display_name}}
+        {{row.user_id}}, 
+        {{row.username|upper}}, 
+        {{row.email|e}}, 
+        {{row.display_name}}
     	{% endfor %}
     {% else %}
         Invalid data.
